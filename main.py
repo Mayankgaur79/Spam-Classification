@@ -101,8 +101,8 @@ if classify_btn:
         # Shows a loading animation while processing
         with st.spinner("Decoding signatures..."):
             # Load models (Ensure paths are correct)
-            model = joblib.load("model/spam_classifier.pkl")
-            vectorizer = joblib.load("model/spam_vectorizer.pkl")
+            model = joblib.load("model/pycharm_dump_spam.pkl")
+            vectorizer = joblib.load("model/pycharm_dump_vect.pkl")
 
             cleaned = data_cleaning(email_input)
             vector_input = vectorizer.transform([cleaned])
